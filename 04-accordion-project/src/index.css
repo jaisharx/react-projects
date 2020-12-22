@@ -149,6 +149,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .container {
@@ -159,7 +160,7 @@ main {
     padding: 2.5rem 2rem;
     max-width: var(--fixed-width);
     display: grid;
-    gap: 1rem 2rem;
+    gap: 1rem 2rem;    
 }
 .container h3 {
     line-height: 1.2;
@@ -209,4 +210,12 @@ main {
     cursor: pointer;
     margin-left: 1rem;
     align-self: center;
+}
+
+button:hover {
+    filter: brightness(85%);
+}
+
+button:focus {
+    outline: none;
 }
