@@ -145,31 +145,63 @@ Color Generator
     display: flex;
     align-items: center;
     height: 100px;
-    padding-left: 2rem;
+    padding: .4rem 0 0 2rem;
 }
 .container h3 {
-    margin-bottom: 0;
-    margin-right: 2rem;
+    margin-bottom: .8rem;
+    margin-right: 1.4rem;
+    position: relative;
+}
+
+.container h3::after {
+    content: '';
+    position: absolute;
+    bottom: -.5rem;
+    right: 0;
+    width: 100%;
+    height: 4px;
+    background-color: rgb(224, 224, 224);
+    border-radius: 12px;
 }
 
 input {
-    border-color: transparent;
-    padding: 0.5rem 1rem;
+
+    border: 1px solid rgb(221, 221, 221);
+    border-right: 1px solid transparent;
+    padding: 0.48rem 1rem;
     font-size: 1.2rem;
     border-top-left-radius: var(--radius);
     border-bottom-left-radius: var(--radius);
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+input:focus {
+    border: 1px solid rgb(129, 128, 128);
+    outline: none;
 }
 .btn {
     background: var(--clr-primary-5);
-    padding: 0.5rem 1rem;
+    padding: 0.38rem 1rem;
     font-size: 1.2rem;
     border-color: transparent;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
     border-top-right-radius: var(--radius);
     border-bottom-right-radius: var(--radius);
     text-transform: capitalize;
     color: var(--clr-white);
     cursor: pointer;
 }
+.btn:hover {
+    filter: brightness(94%);
+}
+.btn:active {
+    filter: brightness(100%);
+}
+.btn:focus {
+    outline: none;
+}
+
 @media screen and (max-width: 576px) {
     .container h3 {
         font-size: 1rem;
@@ -196,9 +228,11 @@ input.error {
 }
 .percent-value {
     margin-bottom: 0;
+    font-weight: 500;
     color: var(--clr-grey-1);
 }
 .color-value {
+    font-size: 1.2rem;
     color: var(--clr-grey-1);
     margin-bottom: 0;
 }
@@ -209,7 +243,12 @@ input.error {
     color: var(--clr-white);
 }
 
+.color-light .alert {
+    color: var(--clr-white);
+}
+
 .alert {
+    color: black;
     text-transform: uppercase;
     font-size: 0.85rem;
     margin-top: 0.5rem;
