@@ -5,7 +5,7 @@ export const links = [
     {
         id: 1,
         url: '/',
-        text: 'random',
+        text: 'home',
     },
     {
         id: 2,
