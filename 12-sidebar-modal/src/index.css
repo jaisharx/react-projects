@@ -326,3 +326,7 @@ Sidebar
         width: 400px;
     }
 }
+
+button:focus {
+    outline: none;
+}
